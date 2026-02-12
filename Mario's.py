@@ -10,6 +10,7 @@ process=input("Do you have anything to do?").lower()
 while process=="no":
     if not To_Do_List:
          print("Bye then")
+         break
     else:
          print(f"There are", len(To_Do_List), "Tasks left")     
 while process=="yes":
