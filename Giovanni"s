@@ -61,3 +61,40 @@ while True:
     print("4. Exit")
 
     choice = input("choose an option (1-4):")
+
+
+
+    if choice == "1":
+        task_name = input("Enter the task name: ")
+        print("Select Priority")
+        print("1 - Incidental")
+        print("2 - Coordinated")
+        print("3 - Planned")
+        priority = input("Enter priority (1-3): ")
+        add_new_task(task_name, priority)
+
+
+    elif choice == "2":
+        display_task()
+        print("Select Priority Catefory: ")
+        print("1 - Incidental")
+        print("2 - Coordinated")
+        print("3 - Planned")
+        priority = input("Enter priority (1-3): ")
+        try:
+            task_number = int(input("Enter task number to remove: "))
+            remove_task(priority, task_number)
+
+        except ValueError:
+            print ("Please enter  valid number.")
+
+
+    elif choice == "3":
+        display_task()
+
+
+    elif choice == "4":
+        print("Exiting program. Goodbye!")
+        break
+    else:
+        print("Invalid option. Please choose 1-4.")
